@@ -1,0 +1,75 @@
+<div *ngIf="issue">
+    <div class="form-group col-sm-12">
+        <label for="id" class="col-sm-2 control-label">ID</label>
+        <div class="col-sm-10">
+            {{issue.id}}
+        </div>
+    </div>
+
+    <div class="form-group col-sm-12">
+        <label for="key" class="col-sm-2 control-label">Key</label>
+        <div class="col-sm-10">
+            {{issue.key}}
+        </div>
+    </div>
+
+    <div class="form-group col-sm-12">
+        <label for="key" class="col-sm-2 control-label">事件类型</label>
+
+        <div class="col-sm-10">
+            {{issue.fields.issuetype.description}} ({{issue.fields.issuetype.name}}) <img [attr.src]="issue.fields.issuetype.iconUrl"
+            />
+        </div>
+    </div>
+
+    <div class="form-group col-sm-12">
+        <label for="key" class="col-sm-2 control-label">创建人</label>
+
+        <div class="col-sm-10">
+            {{issue.fields.creator.displayName}} <img [attr.src]="issue.fields.creator.avatarUrls['16x16']" height="16" />
+        </div>
+    </div>
+    <div class="form-group col-sm-12">
+        <label for="key" class="col-sm-2 control-label">事件概要</label>
+
+        <div class="col-sm-10">
+            {{issue.fields.summary}}
+        </div>
+    </div>
+
+    <div class="form-group col-sm-12">
+        <label for="key" class="col-sm-2 control-label">事件区域</label>
+
+        <div class="col-sm-10">
+            {{issue.fields.customfield_10006}}
+        </div>
+    </div>
+
+    <div class="form-group col-sm-12">
+        <label for="key" class="col-sm-2 control-label">餐厅门店编号</label>
+
+        <div class="col-sm-10">
+            {{issue.fields.customfield_10007}}
+        </div>
+    </div>
+
+
+    <div class="form-group col-sm-12">
+        <label for="key" class="col-sm-2 control-label">创建时间</label>
+
+        <div class="col-sm-10">
+            {{issue.fields.updated | date:'MMM/dd/yyyy h:mma'}}
+        </div>
+    </div>
+
+    <div class="form-group col-sm-12">
+        <label for="key" class="col-sm-2 control-label">事件描述</label>
+
+        <div class="col-sm-10">
+            {{issue.fields.description}}
+        </div>
+    </div>
+</div>
+<div *ngIf="!issue">
+    <i class="fa fa-spinner"></i>
+</div>
