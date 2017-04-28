@@ -62,6 +62,8 @@ import { NotificationService } from './services/notification.service';
 import { BreadcrumbService } from './services/breadcrumb.service';
 import { AdminLTETranslateService } from './services/translate.service';
 import { LoggerService } from './services/logger.service';
+import { JIRAService } from './services/jira.service';
+import { Configuration } from './app.constants';
 
 let services = [
     UserService,
@@ -70,7 +72,9 @@ let services = [
     CanActivateGuard,
     NotificationService,
     AdminLTETranslateService,
-    LoggerService
+    LoggerService,
+    JIRAService,
+    Configuration
 ];
 
 // les pages
@@ -80,12 +84,14 @@ import { ClientComponent } from './pages/client/client.component';
 import { LayoutsAuthComponent } from './pages/layouts/auth/auth';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { IssueDetailComponent } from './pages/issue-detail/issue-detail.component';
 
 let pages = [
     HomeComponent,
     PageNumComponent,
     ClientComponent,
     LayoutsAuthComponent,
+    IssueDetailComponent,
     LoginComponent,
     RegisterComponent
 ];

@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   private email: string;
 
   constructor(
-    private userServ: UserService,
+    private userServ: UserService,    
     private router: Router
   ) {
   }
@@ -28,13 +28,13 @@ export class LoginComponent implements OnInit {
     // envoyer les champs a php
 
     // si retour positif, log le user
-    if ( 1 === 1 ) {
+    if ( 1 === 1 ) {     
 
       let user1 = new User( {
           avatarUrl: 'public/assets/img/user2-160x160.jpg',
-          email: 'weber.antoine.pro@gmail.com',
-          firstname: 'WEBER',
-          lastname: 'Antoine'
+          email: 'zhijun.zhou1992@gmail.com',
+          firstname: 'Allen',
+          lastname: 'Zhou'
       } );
 
       user1.connected = true;

@@ -46,51 +46,47 @@ export class LayoutsAuthComponent implements OnInit {
           {
             'title': 'Home',
             'icon': 'dashboard',
-            'link': ['/']
+            'link': ['/home']
           },
           {
-            'title': 'Client',
-            'icon': 'usd',
-            'link': ['/client']
-          },
-          {
-            'title': 'Sub menu',
+            'title': '事件及工单',
             'icon': 'link',
             'sublinks': [
               {
-                'title': 'Page 2',
-                'link': ['/page/2'],
+                'title': '创建事件',
+                'link': ['/create/issue'],
+                'icon': 'github',
               },
               {
-                'title': 'Page 3',
-                'link': ['/page/3'],
+                'title': '事件列表',
+                'link': ['/home'],
+                'icon': 'github',
+              },
+              {
+                'title': '工单列表',
+                'link': ['/home'],
+                'icon': 'github',
               }
             ]
           },
           {
-            'title': 'External Link',
-            'icon': 'google',
-            'link': ['http://google.com'],
-            'external': true,
-            'target': '_blank'
-          },
-          {
-            'title': 'External Links',
+            'title': '配置',
             'icon': 'link',
             'sublinks': [
               {
-                'title': 'Github',
-                'link': ['http://github.com'],
+                'title': '餐厅列表',
+                'link': ['/stores'],
                 'icon': 'github',
-                'external': true,
-                'target': '_blank'
               },
               {
-                'title': 'Yahoo',
-                'link': ['http://yahoo.com'],
-                'icon': 'yahoo',
-                'external': true,
-                'target': '_blank'
+                'title': '餐厅及服务站',
+                'link': ['/configStore'],
+                'icon': 'github',
+              },
+              {
+                'title': '服务商组织结构',
+                'link': ['/configVendor'],
+                'icon': 'github',
               }
             ]
           }

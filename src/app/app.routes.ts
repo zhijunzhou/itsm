@@ -6,6 +6,7 @@ import { CanActivateGuard } from './services/guard.service';
 import { HomeComponent } from './pages/home/home.component';
 import { PageNumComponent } from './pages/page-num/page-num.component';
 import { ClientComponent } from './pages/client/client.component';
+import { IssueDetailComponent } from './pages/issue-detail/issue-detail.component';
 import { LayoutsAuthComponent } from './pages/layouts/auth/auth';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
@@ -29,6 +30,11 @@ const routes: Routes = [
         canActivate: [CanActivateGuard],
         component: ClientComponent,
         path: 'client'
+      },
+      {
+        canActivate: [CanActivateGuard],
+        component: IssueDetailComponent,
+        path: 'issue/:key'
       }
     ],
     component: LayoutsAuthComponent,
